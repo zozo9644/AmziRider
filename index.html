@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amzi Rider - MotoVlog</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+        
+        header {
+            position: relative;
+            background-image: url('mybike.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            /* طول الهيدر */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-left: 5px solid #e50914;
+            border-radius: 10px;
+            display: inline-block;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        header h1 {
+            font-size: 60px;
+            margin: 0;
+            text-shadow: 2px 2px 5px #000;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            font-size: 22px;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px #000;
+            color: #ddd;
+        }
+        /* Animation */
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .buttons {
+            margin: 40px 0;
+        }
+        
+        .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background: #e50914;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .buttons a:hover {
+            background: #ff3030;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background: #222;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Amzi Rider</h1>
+            <p style="font-size:26px;">بسم الله الرحمن الرحيم</p>
+        </div>
+    </header>
+
+    <main>
+        <p>Hi, I'm Zakaria from Morocco. I create MotoVlog content, sharing my rides and adventures with you.</p>
+        <div class="buttons">
+            <a href="https://www.instagram.com/zakaria_amzil_06/" target="_blank">📸 Instagram</a>
+            <a href="https://www.youtube.com/@zakariaamzil3068" target="_blank">▶️ YouTube</a>
+            <a href="https://wa.me/212620801605" target="_blank">💬 WhatsApp Me</a>
+        </div>
+    </main>
+    <footer>
+        © 2025 Amzi Rider - All rights reserved.
+    </footer>
+</body>
+
+</html>
