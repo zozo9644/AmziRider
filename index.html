@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Amzi Rider - MotoVlog</title>
     <style>
         body {
@@ -20,7 +20,6 @@
             background-size: cover;
             background-position: center;
             height: 300px;
-            /* طول الهيدر */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,12 +43,11 @@
         }
         
         header p {
-            font-size: 22px;
+            font-size: 26px;
             margin-top: 10px;
             text-shadow: 1px 1px 3px #000;
             color: #ddd;
         }
-        /* Animation */
         
         @keyframes fadeIn {
             0% {
@@ -60,6 +58,10 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+        
+        main {
+            padding: 20px;
         }
         
         .buttons {
@@ -81,11 +83,46 @@
             background: #ff3030;
         }
         
+        section.videos {
+            margin: 40px auto;
+            max-width: 600px;
+        }
+        
+        section.videos h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e50914;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #e50914;
+            margin-bottom: 20px;
+        }
+        
         footer {
             margin-top: 60px;
             padding: 20px;
             background: #222;
             font-size: 14px;
+        }
+        /* Responsive */
+        
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 40px;
+            }
+            header p {
+                font-size: 18px;
+            }
+            iframe {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -94,20 +131,27 @@
     <header>
         <div class="header-content">
             <h1>Amzi Rider</h1>
-            <p style="font-size:26px;">بسم الله الرحمن الرحيم</p>
+            <p>بسم الله الرحمن الرحيم</p>
         </div>
     </header>
 
     <main>
-        <p>Hi, I'm Zakaria from Morocco. I create MotoVlog content, sharing my rides and adventures with you.</p>
+        <p>السلام عليكم، أنا زكريا من المغرب. كنشارك معاكم الرحلات والمغامرات ديالي على الموتور فالموتوفلوق.</p>
         <div class="buttons">
-            <a href="https://www.instagram.com/zakaria_amzil_06/" target="_blank">📸 Instagram</a>
-            <a href="https://www.youtube.com/@zakariaamzil3068" target="_blank">▶️ YouTube</a>
-            <a href="https://wa.me/212620801605" target="_blank">💬 WhatsApp Me</a>
+            <a href="https://www.instagram.com/zakaria_amzil_06/" target="_blank">تبعني فـ إنستاغرام 📸</a>
+            <a href="https://www.youtube.com/@zakariaamzil3068" target="_blank">شوف فيديوهاتي فـ يوتيوب ▶️</a>
+            <a href="https://wa.me/212620801605" target="_blank">تواصل معايا فـ واتساب 💬</a>
         </div>
+
+        <section class="videos">
+            <h2>فيديوهات الموتوفلوق ديالي</h2>
+            <iframe src="https://youtu.be/_HGQKpdM_A8?si=fRRadfI_xVKNZcNH" title="فيديو موتوفلوق 1" allowfullscreen></iframe>
+            <iframe src="https://youtu.be/bpzL9l-IlC4?si=wokcRMQW-vA_Wi3Z" title="فيديو موتوفلوق 2" allowfullscreen></iframe>
+        </section>
     </main>
+
     <footer>
-        © 2025 Amzi Rider - All rights reserved.
+        © 2025 Amzi Rider - جميع الحقوق محفوظة.
     </footer>
 </body>
 
