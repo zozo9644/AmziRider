@@ -13,7 +13,7 @@
             color: #fff;
             text-align: center;
         }
-        
+
         header {
             position: relative;
             background-image: url('mybike.jpg');
@@ -24,7 +24,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .header-content {
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
@@ -33,7 +33,7 @@
             display: inline-block;
             animation: fadeIn 2s ease-in-out;
         }
-        
+
         header h1 {
             font-size: 60px;
             margin: 0;
@@ -41,33 +41,34 @@
             color: #fff;
             letter-spacing: 2px;
         }
-        
+
         header p {
             font-size: 26px;
             margin-top: 10px;
             text-shadow: 1px 1px 3px #000;
             color: #ddd;
         }
-        
+
         @keyframes fadeIn {
             0% {
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         main {
             padding: 20px;
         }
-        
+
         .buttons {
             margin: 40px 0;
         }
-        
+
         .buttons a {
             display: inline-block;
             margin: 10px;
@@ -78,16 +79,16 @@
             border-radius: 4px;
             transition: background 0.3s;
         }
-        
+
         .buttons a:hover {
             background: #ff3030;
         }
-        
+
         section.videos {
             margin: 40px auto;
             max-width: 600px;
         }
-        
+
         section.videos h2 {
             font-size: 32px;
             margin-bottom: 20px;
@@ -95,7 +96,7 @@
             display: inline-block;
             padding-bottom: 5px;
         }
-        
+
         iframe {
             width: 100%;
             height: 315px;
@@ -104,14 +105,14 @@
             box-shadow: 0 0 15px #e50914;
             margin-bottom: 20px;
         }
-        
+
         section.gallery {
             margin: 40px auto;
             max-width: 800px;
             padding: 0 20px;
             color: #fff;
         }
-        
+
         section.gallery h2 {
             font-size: 32px;
             margin-bottom: 20px;
@@ -119,13 +120,13 @@
             display: inline-block;
             padding-bottom: 5px;
         }
-        
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 15px;
         }
-        
+
         .gallery-grid img {
             width: 100%;
             border-radius: 10px;
@@ -133,26 +134,71 @@
             transition: transform 0.3s ease;
             box-shadow: 0 0 10px #e50914;
         }
-        
+
         .gallery-grid img:hover {
             transform: scale(1.05);
         }
-        
+
+        section.blog {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #fff;
+        }
+
+        section.blog h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e50914;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        section.blog article {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: right;
+        }
+
+        section.blog article h3 {
+            margin-top: 0;
+            color: #e50914;
+        }
+
+        section.blog article p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        section.blog article a {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section.blog article a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             margin-top: 60px;
             padding: 20px;
             background: #222;
             font-size: 14px;
         }
+
         /* Responsive */
-        
         @media (max-width: 640px) {
             header h1 {
                 font-size: 40px;
             }
+
             header p {
                 font-size: 18px;
             }
+
             iframe {
                 height: 200px;
             }
@@ -199,20 +245,20 @@
                 <img src="images/ride12.jpg" alt="رحلة 12" />
             </div>
         </section>
-<section class="blog">
-  <h2>آخر المقالات</h2>
-  <article>
-    <h3>أهم نصائح السلامة فوق الموتور</h3>
-    <p>السلامة أولاً! فهاد المقال غادي نشارك معاكم نصائح مهمة باش تبقى ديما آمن فوق الموتور...</p>
-    <a href="#">قراءة المزيد</a>
-  </article>
-  <article>
-    <h3>تجربتي مع رحلة الأطلس</h3>
-    <p>رحلة زوينة ومغامرة لا تنسى فجبال الأطلس. هنا تفاصيل الرحلة...</p>
-    <a href="#">قراءة المزيد</a>
-  </article>
-</section>
 
+        <section class="blog">
+            <h2>آخر المقالات</h2>
+            <article>
+                <h3>أهم نصائح السلامة فوق الموتور</h3>
+                <p>السلامة أولاً! فهاد المقال غادي نشارك معاكم نصائح مهمة باش تبقى ديما آمن فوق الموتور...</p>
+                <a href="#">قراءة المزيد</a>
+            </article>
+            <article>
+                <h3>تجربتي مع رحلة الأطلس</h3>
+                <p>رحلة زوينة ومغامرة لا تنسى فجبال الأطلس. هنا تفاصيل الرحلة...</p>
+                <a href="#">قراءة المزيد</a>
+            </article>
+        </section>
     </main>
 
     <footer>
