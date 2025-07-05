@@ -109,7 +109,6 @@
             margin: 40px auto;
             max-width: 800px;
             padding: 0 20px;
-            color: #fff;
         }
         
         section.gallery h2 {
@@ -142,7 +141,6 @@
             max-width: 700px;
             margin: 40px auto;
             padding: 0 20px;
-            color: #fff;
             text-align: right;
         }
         
@@ -159,7 +157,6 @@
             padding: 15px 20px;
             margin-bottom: 20px;
             border-radius: 8px;
-            text-align: right;
         }
         
         section.blog article h3 {
@@ -181,7 +178,13 @@
         section.blog article a:hover {
             text-decoration: underline;
         }
-        /* زر رجوع للأعلى - تصميم جديد */
+        /* عداد الزوار */
+        
+        .visitor-counter {
+            margin: 40px auto;
+            font-size: 20px;
+            color: #ff6b6b;
+        }
         
         #scrollTopBtn {
             position: fixed;
@@ -213,7 +216,6 @@
             background: #222;
             font-size: 14px;
         }
-        /* Responsive */
         
         @media (max-width: 640px) {
             header h1 {
@@ -282,9 +284,12 @@
                 <a href="atlas.html">قراءة المزيد</a>
             </article>
         </section>
+
+        <div class="visitor-counter">
+            عدد الزوار: <span id="count">جاري التحميل...</span>
+        </div>
     </main>
 
-    <!-- زر رجوع للأعلى -->
     <button id="scrollTopBtn" title="رجوع للأعلى">↑</button>
 
     <footer>
@@ -293,7 +298,6 @@
 
     <script>
         const scrollBtn = document.getElementById('scrollTopBtn');
-
         window.onscroll = function() {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 scrollBtn.style.display = "block";
@@ -301,13 +305,23 @@
                 scrollBtn.style.display = "none";
             }
         };
-
         scrollBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
+
+        // عداد الزوار
+        fetch('https://api.countapi.xyz/hit/amzi_rider_motovlog/visits')
+            .then(res => res.json())
+            .then(res => {
+                document.getElementById('count').innerText = res.value;
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('count').innerText = "خطأ";
+            });
     </script>
 </body>
 
