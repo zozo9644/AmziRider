@@ -54,6 +54,7 @@
         opacity: 0;
         transform: translateY(-30px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
@@ -109,6 +110,7 @@
       margin: 40px auto;
       max-width: 800px;
       padding: 0 20px;
+      color: #fff;
     }
 
     section.gallery h2 {
@@ -141,6 +143,7 @@
       max-width: 700px;
       margin: 40px auto;
       padding: 0 20px;
+      color: #fff;
       text-align: right;
     }
 
@@ -157,6 +160,7 @@
       padding: 15px 20px;
       margin-bottom: 20px;
       border-radius: 8px;
+      text-align: right;
     }
 
     section.blog article h3 {
@@ -177,12 +181,6 @@
 
     section.blog article a:hover {
       text-decoration: underline;
-    }
-
-    .visitor-counter {
-      margin: 40px auto;
-      font-size: 20px;
-      color: #ff6b6b;
     }
 
     #scrollTopBtn {
@@ -220,9 +218,11 @@
       header h1 {
         font-size: 40px;
       }
+
       header p {
         font-size: 18px;
       }
+
       iframe {
         height: 200px;
       }
@@ -283,10 +283,6 @@
         <a href="atlas.html">قراءة المزيد</a>
       </article>
     </section>
-
-    <div class="visitor-counter">
-      عدد الزوار: <span id="count">...</span>
-    </div>
   </main>
 
   <button id="scrollTopBtn" title="رجوع للأعلى">↑</button>
@@ -296,8 +292,8 @@
   </footer>
 
   <script>
-    // زر رجوع للأعلى
     const scrollBtn = document.getElementById('scrollTopBtn');
+
     window.onscroll = function () {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         scrollBtn.style.display = "block";
@@ -305,23 +301,14 @@
         scrollBtn.style.display = "none";
       }
     };
+
     scrollBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     });
-
-    // عداد الزوار
-    fetch('https://api.countapi.xyz/hit/amzi_rider_motovlog/visits')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('count').textContent = data.value;
-      })
-      .catch(error => {
-        console.error(error);
-        document.getElementById('count').textContent = "خطأ فالتحميل";
-      });
   </script>
 </body>
+
 </html>
