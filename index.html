@@ -105,6 +105,39 @@
             margin-bottom: 20px;
         }
         
+        section.gallery {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 0 20px;
+            color: #fff;
+        }
+        
+        section.gallery h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e50914;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 10px #e50914;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        
         footer {
             margin-top: 60px;
             padding: 20px;
@@ -143,11 +176,29 @@
             <a href="https://wa.me/212620801605" target="_blank">تواصل معايا فـ واتساب 💬</a>
         </div>
 
-       <section class="videos">
-    <h2>فيديوهات الموتوفلوق ديالي</h2>
-    <iframe src="https://www.youtube.com/embed/bpzL9l-IlC4" title="فيديو موتوفلوق 1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/_HGQKpdM_A8" title="فيديو موتوفلوق 2" allowfullscreen></iframe>
-</section>
+        <section class="videos">
+            <h2>فيديوهات الموتوفلوق ديالي</h2>
+            <iframe src="https://www.youtube.com/embed/bpzL9l-IlC4" title="فيديو موتوفلوق 1" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/_HGQKpdM_A8" title="فيديو موتوفلوق 2" allowfullscreen></iframe>
+        </section>
+
+        <section class="gallery">
+            <h2>صور من الرحلات ديالي</h2>
+            <div class="gallery-grid">
+                <img src="images/ride1.jpg" alt="رحلة 1" />
+                <img src="images/ride2.jpg" alt="رحلة 2" />
+                <img src="images/ride3.jpg" alt="رحلة 3" />
+                <img src="images/ride4.jpg" alt="رحلة 4" />
+                <img src="images/ride5.jpg" alt="رحلة 5" />
+                <img src="images/ride6.jpg" alt="رحلة 6" />
+                <img src="images/ride7.jpg" alt="رحلة 7" />
+                <img src="images/ride8.jpg" alt="رحلة 8" />
+                <img src="images/ride9.jpg" alt="رحلة 9" />
+                <img src="images/ride10.jpg" alt="رحلة 10" />
+                <img src="images/ride11.jpg" alt="رحلة 11" />
+                <img src="images/ride12.jpg" alt="رحلة 12" />
+            </div>
+        </section>
 
     </main>
 
