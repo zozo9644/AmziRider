@@ -143,6 +143,7 @@
             margin: 40px auto;
             padding: 0 20px;
             color: #fff;
+            text-align: right;
         }
         
         section.blog h2 {
@@ -179,6 +180,31 @@
         
         section.blog article a:hover {
             text-decoration: underline;
+        }
+        /* زر رجوع للأعلى - تصميم جديد */
+        
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: linear-gradient(135deg, #e50914, #ff5733);
+            color: white;
+            border: none;
+            padding: 16px 18px;
+            border-radius: 50%;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 6px 15px rgba(229, 9, 20, 0.6);
+            transition: background 0.4s, transform 0.3s;
+            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+        }
+        
+        #scrollTopBtn:hover {
+            background: linear-gradient(135deg, #ff3030, #ff6b6b);
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(255, 48, 48, 0.8);
         }
         
         footer {
@@ -258,9 +284,31 @@
         </section>
     </main>
 
+    <!-- زر رجوع للأعلى -->
+    <button id="scrollTopBtn" title="رجوع للأعلى">↑</button>
+
     <footer>
         © 2025 Amzi Rider - جميع الحقوق محفوظة.
     </footer>
+
+    <script>
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
