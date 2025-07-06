@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>خريطة رحلات Amzi Rider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+        
+        #map {
+            height: 500px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 2px solid #e50914;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            margin-top: 20px;
+            font-size: 32px;
+            color: #e50914;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>خريطة الرحلات ديالي 🗺️</h1>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([32.5, -7], 6); // مركز المغرب
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var places = [{
+                name: "الجديدة",
+                coords: [33.2539, -8.5060]
+            }, {
+                name: "أزمور",
+                coords: [33.2889, -8.3443]
+            }, {
+                name: "سيدي رحال",
+                coords: [33.5291, -7.8890]
+            }, {
+                name: "أزيلال",
+                coords: [31.9710, -6.5714]
+            }, {
+                name: "شلالات أوزود",
+                coords: [32.0156, -6.7156]
+            }, {
+                name: "بني ملال",
+                coords: [32.3394, -6.3608]
+            }, {
+                name: "الفقيه بن صالح",
+                coords: [32.5042, -6.7341]
+            }, {
+                name: "قصبة تادلة",
+                coords: [32.6000, -6.2833]
+            }, {
+                name: "البروج",
+                coords: [32.5667, -7.5333]
+            }, {
+                name: "أيت اعتاب",
+                coords: [32.0265, -6.4622]
+            }, {
+                name: "أولاد عياد",
+                coords: [32.3078, -6.5099]
+            }, {
+                name: "زاوية أحنصال",
+                coords: [31.6572, -6.2349]
+            }, {
+                name: "عين أسردون",
+                coords: [32.3421, -6.3589]
+            },
+
+            // المدن الجديدة
+            {
+                name: "سوق السبت",
+                coords: [33.4726, -6.3267]
+            }, {
+                name: "بني آيت",
+                coords: [31.4500, -7.9000]
+            }, {
+                name: "خريبكة",
+                coords: [32.9333, -6.9000]
+            }, {
+                name: "بن أحمد",
+                coords: [32.3000, -7.1000]
+            }, {
+                name: "دار بوعزة",
+                coords: [33.6540, -7.5111]
+            }, {
+                name: "بئر جديد",
+                coords: [33.1500, -7.3500]
+            }, {
+                name: "برشيد",
+                coords: [33.0100, -7.0100]
+            }, {
+                name: "الحساسنة",
+                coords: [31.5600, -7.2700]
+            }
+        ];
+        places.forEach(place => {
+            L.marker(place.coords).addTo(map)
+                .bindPopup("<b>" + place.name + "</b>");
+        });
+    </script>
+</body>
+
+</html>
